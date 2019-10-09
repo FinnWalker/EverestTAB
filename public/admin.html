@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Everest Admin</title>
+    <style>
+        @font-face {
+            font-family: "gilroy_regular";
+            src: url("./fonts/Gilroy-Regular.ttf");
+        }
+
+        label {
+            font-family: gilroy_regular
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="http://192.168.0.77:3000/admin_settings">
+        <label>Step weight (i.e steps per step. End goal is 500,000 steps) <input type="number" name="weight" value="100"></label><br><br>
+        <label>RESET PROGRESS & MILESTONES <input id="reset-button" onClick="warn()" type="checkbox" name="reset"></label><br><br>
+        <input type="submit">
+    </form>
+
+    <script>
+    const checkbox = document.getElementById('reset-button');
+    function warn() {
+        if(checkbox.checked) {
+            alert('Are you sure? This will reset all progress.');
+        }
+        
+    }
+    </script>
+</body>
+
+</html>

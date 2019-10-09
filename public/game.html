@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="index.css" />
+  <script src="./js/confetti.js"></script>
+  <title>TAB Everest</title>
+</head>
+
+<body>
+  <div id="leaderboard" class="left">
+    <span id="leaderboard-text"></span>
+  </div>
+  <div id="most-step-leaderboard">
+    <span id="most-steps-leaderboard-text"></span>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+  <img src="milestone_popup.png" id="milestone-popup" />
+
+  <img id="branding" src="branding.png" alt="" />
+  <div id="footer">
+    <img id="mountain-blur" src="mountain_blur.png" />
+    <span id="footer-text">NSW res. 18+ only.<br>Activation Period 1 (World Square): starts 04/10/19
+      at 8:00 am AEST & ends 04/10/19 at 19:00 AEST.<br>Activation Period 2
+      (Martin Place): starts 15/10/19 at 08:00 am AEDT & ends 15/10/19 at
+      14:00 pm AEDT.<br>T&Cs apply, see
+      http://tabinfo.com.au/T&CsClimbtotheEverestCompetition.pdf NSW Permit
+      No. LTPS/19/38198.
+    </span>
+  </div>
+  <div id="mountain">
+    <img id="everest" src="mountain.png" />
+    <img id="horse" src="horse.gif" />
+    <div id="milestone-1" class="milestone">
+      <img id="flag-1" class="grayscale" src="flag.gif" alt="" />
+    </div>
+    <div id="milestone-2" class="milestone">
+      <img id="flag-2" class="grayscale" src="flag.gif" alt="" />
+    </div>
+    <div id="milestone-3" class="milestone">
+      <img id="flag-3" class="grayscale" src="flag.gif" alt="" />
+    </div>
+    <div id="milestone-4" class="milestone">
+      <img id="flag-4" class="grayscale" src="flag.gif" alt="" />
+    </div>
+    <div id="milestone-5" class="milestone">
+      <img id="flag-5" class="grayscale" src="flag.gif" alt="" />
+    </div>
+    <div id="milestone-6" class="milestone">
+      <img id="flag-6" class="grayscale" src="flag.gif" alt="" />
+    </div>
+    <div id="milestone-7" class="milestone">
+      <img id="flag-7" class="grayscale" src="flag.gif" alt="" />
+    </div>
+  </div>
+  <div id="player-bar">
+    <div class="player-box">
+      <span id="player3" class="player-name">_</span><span class="player-steps" id="steps3">0<span
+          style="font-size: 3vmin"> STEPS</span></span><span class="player-time" id="time3">0:00</span>
+    </div>
+    <div class="player-box dark-green">
+      <span id="player2" class="player-name">_</span><span class="player-steps" id="steps2">0<span
+          style="font-size: 3vmin"> STEPS</span></span><span class="player-time" id="time2">0:00</span>
+    </div>
+    <div class="player-box">
+      <span id="player1" class="player-name">_</span><span class="player-steps" id="steps1">0<span
+          style="font-size: 3vmin"> STEPS</span></span><span class="player-time" id="time1">0:00</span>
+    </div>
+    <div class="player-box dark-green">
+      <span id="player0" class="player-name">_</span><span class="player-steps" id="steps0">0<span
+          style="font-size: 3vmin"> STEPS</span></span><span class="player-time" id="time0">0:00</span>
+    </div>
+  </div>
+
+  <script src="horse.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/game.js"></script>
+</body>
+
+</html>

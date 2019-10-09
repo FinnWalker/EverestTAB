@@ -1,0 +1,1 @@
+The names of each signature png correspond to player ids.
