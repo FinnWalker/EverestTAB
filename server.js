@@ -96,6 +96,7 @@ setInterval(() => {
       }
     });
 
+  /*
   let most_step_leaderboard = [];
   Player.find({})
     .sort({ most_steps: -1 })
@@ -110,7 +111,10 @@ setInterval(() => {
         io.emit("most-step-leaderboard", most_step_leaderboard);
       }
     });
+
+    */
 }, 1000);
+
 
 io.on("connection", function (socket) {
   console.log("a user connected");

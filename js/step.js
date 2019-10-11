@@ -26,8 +26,10 @@ function step(req, res) {
               });
             } else if (player) {
               player.steps = parseInt(player.steps) + parseInt(step);
+              /*
               player.current_steps = parseInt(player.current_steps) + parseInt(step);
               if (player.current_steps > player.most_steps) player.most_steps = player.current_steps;
+              */
               player.save().then(() => {
                 req.app.io.emit('step', {treadmill: treadmill.name, steps: player.steps});
                 res.status(200).json({ player });

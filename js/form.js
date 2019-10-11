@@ -31,7 +31,7 @@ function form(req, res) {
   ) {
 
     function findPlayer(num_of_players, name_postfix) {
-      Player.findOne({ player_name: `${player_name}${name_postfix}` }, function(
+      Player.findOne({ player_name: `${player_name}${name_postfix}` }, function (
         err,
         player
       ) {
@@ -39,6 +39,7 @@ function form(req, res) {
           console.log(player);
           findPlayer(num_of_players + 1, `_${num_of_players + 1}`);
         } else {
+          /*
           const newPlayer = new Player({
             id: uuid.v4(),
             eligible,
@@ -54,6 +55,21 @@ function form(req, res) {
             steps: 0,
             current_steps: 0,
             most_steps: 0
+          });
+          */
+          const newPlayer = new Player({
+            id: uuid.v4(),
+            eligible,
+            terms,
+            first_name,
+            last_name,
+            player_name: `${player_name}${name_postfix}`,
+            date_of_birth,
+            mobile,
+            email,
+            customer,
+            marketing,
+            steps: 0
           });
           newPlayer.save().then(() => {
             res

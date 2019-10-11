@@ -4,7 +4,7 @@ var myCanvas = document.getElementById('confetti-canvas');
 var myConfetti = confetti.create(myCanvas, { resize: true });
 
 const leaderboard_text = document.getElementById('leaderboard-text');
-const most_steps_leaderboard_text = document.getElementById('most-steps-leaderboard-text');
+//const most_steps_leaderboard_text = document.getElementById('most-steps-leaderboard-text');
 
 const leaderboards = [document.getElementById('leaderboard'), document.getElementById('most-step-leaderboard')];
 
@@ -58,7 +58,7 @@ socket.on("leaderboard", leaderboard => {
   }
   leaderboard_text.innerHTML = leaderboard_text_temp;
 });
-
+/*
 socket.on("most-step-leaderboard", leaderboard => {
   let leaderboard_text_temp = "<div class='text-align-center'><i>Steps in 5 minutes</i></div><hr>";
   let player = null;
@@ -71,6 +71,7 @@ socket.on("most-step-leaderboard", leaderboard => {
   }
   most_steps_leaderboard_text.innerHTML = leaderboard_text_temp;
 });
+*/
 
 socket.on("play", data => {
   time_elements[data.treadmill].innerHTML = "5:00";
@@ -125,10 +126,11 @@ socket.on("active-players", players => {
   }
 });
 
-
+/*
 let current_board = 0;
 setInterval(() => {
   leaderboards[current_board].classList.remove('left');
   current_board = (current_board + 1)%2;
   leaderboards[current_board].classList.add('left');
 }, 15000);
+*/

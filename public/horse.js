@@ -56,20 +56,3 @@ function updateHorse(progress) {
 }
 
 updateHorse(0);
-
-/*
-        progress = 0;
-        last_frame = null
-        function update(timestamp) {
-            if(last_frame === null) last_frame = timestamp;
-            const delta_time = timestamp - last_frame;
-            last_frame = timestamp;
-
-            progress = (progress + delta_time/50);
-            if (progress > 100) progress = 100;
-            updateHorse(progress);
-            window.requestAnimationFrame(update);
-        }
-
-        window.requestAnimationFrame(update);
-        */
